@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <script>
+        function play(str){
+            let displayField = document.getElementById('display');
+            if(str === "q" || str === "Q"){
+            displayField.innerHTML = "Clap";
+            }
+            else if(str === "w" || str === "W"){
+                displayField.innerHTML = "Piano";
+            }
+            else if(str === "e" || str === "E"){
+                displayField.innerHTML = "Peacock";
+            }
+            else if(str === "a" || str === "A"){
+                displayField.innerHTML = "Knock";
+            }
+            else if(str === "s" || str === "S"){
+                displayField.innerHTML = "Zumba";
+            }
+            else if(str === "d" || str === "D"){
+                displayField.innerHTML = "Wild";
+            }
+            else if(str === "z" || str === "Z"){
+                displayField.innerHTML = "Hang on";
+            }
+            else if(str === "x" || str === "X"){
+                displayField.innerHTML = "Heater";
+            }
+            else if(str === "c" || str === "C"){
+                displayField.innerHTML = "Dumbo";
+            }
+            
+            var audio = document.getElementById(str);
+            audio.play();
+        }
+        window.document.onkeyup = function(event){
+            let keyValue = event.key
+            if(keyValue === "q" || keyValue === "Q"){
+                play("Q");
+            }
+            else if(keyValue === "w" || keyValue === "W"){
+                play("W");
+            }
+            else if(keyValue === "e" || keyValue === "E"){
+                play("E");
+            }
+            else if(keyValue === "a" || keyValue === "A"){
+                play("A");
+            }
+            else if(keyValue === "s" || keyValue === "S"){
+                play("S");
+            }
+            else if(keyValue === "d" || keyValue === "D"){
+                play("D");
+            }
+            else if(keyValue === "z" || keyValue === "Z"){
+                play("Z");
+            }
+            else if(keyValue === "x" || keyValue === "X"){
+                play("X");
+            }
+            else if(keyValue === "c" || keyValue === "C"){
+                play("C");
+            }
+        }
+
+
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="container">
+    <div id="drum-machine">
+
+        <div class="card">
+            <h5 class="card-header text-center">Drum Machine</h5>
+            <div class="card-body text-center text-white btn-danger" style ="font-size: 2rem;">
+        <div id="display">Drum Play</div></div></div>
+
+                
+        
+        <button id="drum-1" class="drum-pad btn-block btn-info d-inline p-2" onClick="play('Q')">
+        Q
+        <audio id="Q" class="clip" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3"></audio>
+        </button>
+        <button id="drum-2" class="drum-pad btn-block btn-success d-inline p-2" onClick="play('W')">
+        W
+        <audio id="W" class="clip" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3"></audio>
+        </button>
+        <button id="drum-3" class="drum-pad btn-block btn-primary d-inline p-2" onClick="play('E')">
+        E
+        <audio id="E" class="clip" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3"></audio>
+        </button>
+        <button id="drum-4" class="drum-pad btn-block btn-danger d-inline p-2" onClick="play('A')">
+        A
+        <audio id="A" class="clip" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3"></audio>
+        </button>
+        <button id="drum-5" class="drum-pad btn-block btn-warning d-inline p-2" onClick="play('S')">
+        S
+        <audio id="S" class="clip" src="https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3"></audio>
+        </button>
+        <button id="drum-6" class="drum-pad btn-block btn-danger d-inline p-2" onClick="play('D')">
+        D
+        <audio id="D" class="clip" src="https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3"></audio>
+        </button>
+        <button id="drum-7" class="drum-pad btn-block btn-success d-inline p-2" onClick="play('Z')">
+        Z
+        <audio id="Z" class="clip" src="https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3"></audio>
+        </button>
+        <button id="drum-8" class="drum-pad btn-block btn-info d-inline p-2" onClick="play('X')">
+        X
+        <audio id="X" class="clip" src="https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3"></audio>
+        </button>
+        <button id="drum-9" class="drum-pad btn-block btn-warning d-inline p-2" onClick="play('C')">
+        C
+        <audio id="C" class="clip" src="https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3"></audio>
+        </button>
+
+    </div></div>
+
+
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>   
+</body>
+</html>
